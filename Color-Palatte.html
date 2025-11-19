@@ -295,22 +295,6 @@
         </div>
     </div>
 
-    <script>
-        // Add click functionality to copy hex values
-        document.querySelectorAll('.color').forEach(color => {
-            color.addEventListener('click', function() {
-                const hexCode = this.querySelector('.color-hex').textContent;
-                navigator.clipboard.writeText(hexCode).then(() => {
-                    // Visual feedback
-                    const originalText = this.querySelector('.color-name').textContent;
-                    this.querySelector('.color-name').textContent = 'Copied!';
-                    
-                    setTimeout(() => {
-                        this.querySelector('.color-name').textContent = originalText;
-                    }, 1000);
-                });
-            });
-        });
-    </script>
 </body>
+
 </html>
